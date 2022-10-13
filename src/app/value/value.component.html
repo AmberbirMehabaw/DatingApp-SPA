@@ -1,0 +1,5 @@
+<h1>All Values</h1>
+
+<div class="a" *ngFor="let value of values">
+    <a  [routerLink]="['/value',value.id]">{{value.name}}</a>
+</div>
