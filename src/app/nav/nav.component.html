@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Dating App</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Matches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Messages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fa-fa-sign-out" href="#" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+
+      <div *ngIf="loggedIn()" class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle text-light">
+          Welcome User
+        </a>
+      
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#" class="fa-fa-user">Edit Profile</a>
+          <a class="dropdown-divider"></a>
+          <a class="dropdown-item fa-fa-sign-out" href="#">Logout</a>
+        </div>
+      </div>
+
+      <form *ngIf="!loggedIn()" #loginForm="ngForm" class="form" (ngSubmit)="login()">
+        <div style="margin-bottom: 10px;">
+          <input class="form-control mr-sm-2" type="text" #username="ngModel" 
+          placeholder="Username" name="username" required [(ngModel)]="model.username">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <input class="form-control mr-sm-2 " type="password" #password="ngModel"
+           placeholder="Password" name="password" [(ngModel)]="model.password">
+        </div>
+        <button [disabled]="!loginForm.valid" class="btn btn-success" type="submit">Login</button>
+      </form>
+    </div>
+</nav>

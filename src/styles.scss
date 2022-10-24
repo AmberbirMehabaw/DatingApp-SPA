@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.appTable{
+  border-collapse: inherit;
+}
+.headTable{
+  border-bottom: 1px solid #b4b4bd;
+  border-collapse: collapse;
+}
+.page-header-title{
+  font-weight: bold;
+  border-radius: 5px;
+  border-bottom: 1px solid #b4b4bd;
+  // padding-right: 0.5rem;
+}
+.form-label{
+  margin-top:0.75rem !important;
+  margin-bottom: 0.175rem !important;
+}
+app-back-button {
+  padding-right: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .app-search{
+    padding-top:10px !important;
+  }
+  .appTable{
+    margin-left:0px !important;
+  }
+  .app-title{
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) {
+  .app-search{
+    width:35vw;
+  }
+}
+
+.form-control{
+  width:97%;
+}
+nb-select{
+  border: 1px solid #ced4da !important;
+}
+.fullWidth97{
+  width: 100%;
+}
+nb-select{
+  padding-right: 18px;
+}
+.mr-6{
+  margin-right: 6px;
+}
+
+.mt-30{
+  margin-top: 30px;
+}
+
+.mt-25{
+  margin-top: 25px;
+}
+.mt-6{
+  margin-top: 30px;
+}
+li.tab.ng-star-inserted:hover{
+  border-bottom: 0px !important;
+}
+nb-tabset .tab .tab-link:hover{
+  color: #0a58ca;
+  border-bottom: 0px !important;
+}
+.float-right{
+  float: right;
+}
+// Sidebar Hover EFFECTS
+.menu-items>li.menu-item>a:hover {
+  background-color: #5387b9;
+  color: #fff;
+  border-radius: 3px; 
+  box-shadow: -6px 11px 19px rgb(136 170 203 / 66%);
+  padding-left: 13px;
+}
+nb-menu .menu-item a:hover {
+  background-color: #5387b9;
+  color: #fff;
+}
+nb-menu .menu-item a:hover .menu-icon
+{  
+  color: #fff;
+}
+nb-card-header{
+  border-left:5px solid #5387b9;
+  border-radius: 8px;
+}
+nb-window nb-card nb-card-header{
+  // border-left:0px;
+  height: 30px;
+}
+nb-layout-column.colored-column-basic{
+  margin-top: -18px;
+}
