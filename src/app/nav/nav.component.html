@@ -18,7 +18,7 @@
 
       <div *ngIf="loggedIn()" class="dropdown show">
         <a class="btn btn-secondary dropdown-toggle text-light">
-          Welcome User
+          Welcome {{modelService.decodedToken?.unique_name | titlecase}}
         </a>
       
         <div class="dropdown-menu">

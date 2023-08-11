@@ -8,8 +8,8 @@ import { AuthService } from '../services/auth.service';
 })
 export class NavComponent implements OnInit {
   model : any = {};
-  constructor(private modelService: AuthService,
-              private alertifyService: AlertifyService) { }
+  constructor(public modelService: AuthService,
+              private alertifyService: AlertifyService,) { }
 
   ngOnInit() {
   }
@@ -22,8 +22,7 @@ login(){
 }
 
 loggedIn(){
-  const token = localStorage.getItem('token');
-  return !!token;
+  return this.modelService.loggedIn();
 }
 
 logout(){
