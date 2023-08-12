@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown'
 import { AppRoutingModule } from './app-routing.module';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -26,6 +26,7 @@ import { ErrorInterceptor, ErrorInterceptorProvide } from './services/error-inte
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [ErrorInterceptorProvide],
   bootstrap: [AppComponent]

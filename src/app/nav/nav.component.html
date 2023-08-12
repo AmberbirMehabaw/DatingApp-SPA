@@ -16,15 +16,15 @@
         </li>
       </ul>
 
-      <div *ngIf="loggedIn()" class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle text-light">
+      <div *ngIf="loggedIn()" class="dropdown show" dropdown>
+        <a class="btn btn-secondary dropdown-toggle text-light" dropdownToggle>
           Welcome {{modelService.decodedToken?.unique_name | titlecase}}
         </a>
       
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#" class="fa-fa-user">Edit Profile</a>
+        <div class="dropdown-menu" *dropdownMenu>
+          <a class="dropdown-item" href="#"><i class="fa-fa-user"></i>Edit Profile</a>
           <a class="dropdown-divider"></a>
-          <a class="dropdown-item fa-fa-sign-out" href="#">Logout</a>
+          <a class="dropdown-item " href="#"><i class="fa-fa-sign-out"></i>Logout</a>
         </div>
       </div>
 
